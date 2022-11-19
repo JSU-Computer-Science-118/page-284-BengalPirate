@@ -1,50 +1,24 @@
 // Brandon Newton J00610524 11/15/22
 // Due Wednesday Nov 16, 2022
 // P 284
-// Flag-controlled while loop
-// Number guessing game
+//Random Numbers
 
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
 
 using namespace std;
-
 int main()
 {
-  int num;
-  int guess;
-  bool isGuessed;
-
+  int i, rnum, amount;
+  cin >> amount;
   srand(time(0));
-  num = rand() % 100;
-
-  isGuessed = false;
-
-  while (!isGuessed)
+  for(i=0; i<amount; i++)
     {
-      cout << "Enter an integer greater"
-          << " than or equal to 0 and "
-          << "less than 100: ";
-
-      cin >> guess;
-      cout << endl;
-
-      if (guess == num)
-      {
-        cout << "You guessed the correct "
-            << "number." << endl;
-        isGuessed = true;
-      }
-      else if (guess < num)
-          cout << "Your guess is lower than the "
-           << "number.\n Guess again!"
-            << endl;
-      else  
-          cout << "Your guess is higher than "
-            << "the number.\n Guess again!"
-            << endl;
-      }
-  return 0;
+      rnum = rand() % (100+1 -0) + 0; 
+      cout << rnum << " ";
+      
+    }
+  return 0; 
 }
 
